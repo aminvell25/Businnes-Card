@@ -1,0 +1,77 @@
+body {
+    margin: 20px;
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.avatar {
+    width: 150px;
+    border: 5px solid #ffbd00;
+    border-radius: 60px;
+    box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #a8c256;
+    color: #9d4edd;
+    border-top: 4px double #ffbd00;
+    border-bottom: 8px double #ffbd00;
+    border-radius: 30px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.35);
+    /* transition non tocca più transform */
+    transition: box-shadow 2.4s ease,
+                text-shadow 2.4s ease,
+                background 2.4s ease;
+}
+
+.card:hover {
+    background: #a8c256;
+    border-top: 4px double #ffbd00;
+    border-bottom: 8px double #ffbd00;
+    text-shadow: 0px 2px 0px rgba(0,0,0,0);
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    animation: bounceScale 1.2s ease forwards;
+    /* niente transform qui */
+}
+
+@keyframes bounceScale {
+  0%   { transform: translateX(0) scale(1); }
+  10%  { transform: translateX(-8px) scale(1); }
+  20%  { transform: translateX(8px) scale(1); }
+  30%  { transform: translateX(-8px) scale(1); }
+  40%  { transform: translateX(8px) scale(1); }
+  50%  { transform: translateX(-6px) scale(1); }
+  60%  { transform: translateX(6px) scale(1); }
+  70%  { transform: translateX(-4px) scale(1); }
+  80%  { transform: translateX(4px) scale(1.02); }  
+  100% { transform: translateX(0) scale(1.20); }
+}
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
+
+/*
+Final challenge:
+Download the code to your local computer aned place it
+in a folder called "business-card"
+*/
